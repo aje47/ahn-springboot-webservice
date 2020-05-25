@@ -23,7 +23,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: ahn-springboot-build
-    region: ap-northeast-2
+    region: us-east-2
     skip_cleanup: true
     acl: private
     local_dir: deploy
@@ -37,7 +37,7 @@ deploy:
     bundle_type: zip
     application: ahn-springboot-webservice
     deployment_group: ahn-springboot-webservice-group
-    region: ap-northeast-2
+    region: us-east-2
     wait-until-deployed: true
 
 # C 실행 완료시 메일로 알람
