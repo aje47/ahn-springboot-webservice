@@ -37,7 +37,7 @@ deploy:
     bundle_type: zip
     application: ahn-springboot-webservice
     deployment_group: ahn-springboot-webservice-group
-    region: us-east-2
+    region: ap-northeast-2
     wait-until-deployed: true
 
 # C 실행 완료시 메일로 알람
