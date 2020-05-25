@@ -15,7 +15,7 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r ahn-springboot-webservice
+  - zip -r ahn-springboot-webservice *
   - mkdir -p deploy
   - mv ahn-springboot-webservice.zip deploy/ahn-springboot-webservice.zip
 deploy:
