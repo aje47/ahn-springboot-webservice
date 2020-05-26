@@ -22,8 +22,8 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: ahn-springboot-build
-    region: ap-northeast-2
+    bucket: ahn2-springboot-build
+    region: us-east-2
     skip_cleanup: true
     acl: private
     local_dir: deploy
@@ -32,7 +32,7 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: ahn-springboot-build
+    bucket: ahn2-springboot-build
     key: ahn-springboot-webservice.zip
     bundle_type: zip
     application: ahn-springboot-webservice
