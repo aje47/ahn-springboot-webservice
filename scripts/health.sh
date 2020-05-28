@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# 엔진엑스와 연결되지 않은 포트로 스프링 부트가 잘 수행되었는지 체크한다.
-# 잘 떴는지 확인되어야 엔진엑스 프록시 설정을 변경(switch_proxy)한다.
-# 엔진엑스 프록시 설정 변경은 switch.sh에서 수행
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
 source ${ABSDIR}/profile.sh
@@ -23,9 +20,10 @@ do
   if [ ${UP_COUNT} -ge 1 ]
   then # $up_count >= 1 ("real" 문자열이 있는지 검증)
     echo "> Health check 성공"
+    switch_proxy
     break
   else
-    echo "> Health check의 응답을 알 수 없거나 혹은 status가 UP이 아닙니다."
+    echo "> Health check의 응답을 알 수 없거나 혹은 실행 상태가 아닙니다."
     echo "> Health check: ${RESPONSE}"
   fi
 
